@@ -7,14 +7,14 @@ class DishDetail extends Component {
         super(props);
     }
     //Dish Detail
-    renderDish(dish){
-        if(dish!=null)
+    renderDish(dish1){
+        if(dish1!=null)
         return(
             <Card>
-                <CardImg width="100%" src={dish.image} alt={dish.name} />
+                <CardImg width="100%" src={dish1.image} alt={dish1.name} />
                 <CardBody>
-                    <CardTitle>{dish.name}</CardTitle>
-                    <CardText>{dish.description}</CardText>
+                    <CardTitle>{dish1.name}</CardTitle>
+                    <CardText>{dish1.description}</CardText>
                 </CardBody>
 
             </Card>
@@ -25,10 +25,10 @@ class DishDetail extends Component {
             );
     }
     //Comment Display
-    renderComments(dish){
-        const commentlist = dish.comments.map((comment) =>{
+    renderComments(dish1){
+        const commentlist = dish1.comments.map((comment) =>{
             return(
-                <div key={comment.id}>
+                <div key={comment.id} className="container">
                     <p>{comment.comment}</p>
                     <p>-- {comment.author},
                     &nbsp;
@@ -44,7 +44,7 @@ class DishDetail extends Component {
             );
         });
 
-        if(dish.comments != null){
+        if(dish1.comments != null){
             return(
                 <div>
                     <h4>Comments</h4>
@@ -56,17 +56,19 @@ class DishDetail extends Component {
             return(<div></div>);
     }
     render(){
-        if(this.props.selectedDish != null){
+       
+        if(this.props.dish != null){
+            console.log(this.props.dish )
             return(
                 <div className="container">
                     <div className="row">
                         <div className="col-12 col-md-5 m-1">
                             {/*dish detail*/}
-                            {this.renderDish(this.props.selectedDish)}
+                            {this.renderDish(this.props.dish)}
                         </div>
                         <div className="col-12 col-md-5 m-1">
                             {/*Display Comments*/}
-                            {this.renderComments(this.props.selectedDish)}
+                            {this.renderComments(this.props.dish)}
                         </div>
                     </div>
                 </div>
