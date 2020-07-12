@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import { Card, CardImg, CardImgOverlay,CardTitle } from 'reactstrap';
-<<<<<<< HEAD
 import DishDetail from './DishdetailComponent';  
-=======
-import DishDetail from './DishDetailComponent';  
->>>>>>> 080bc83942ee5189a4b682f698fb6f2a49ec5969
 
 
   class Menu extends Component {
