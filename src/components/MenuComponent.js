@@ -5,11 +5,6 @@ import { Card, CardImg, CardImgOverlay,CardTitle } from 'reactstrap';
 
   class Menu extends Component {
 
-    constructor(props) {
-        super(props);
-
-        
-    }
     render() {
       const menu = this.props.dishes.map((dish) => {
           return (
