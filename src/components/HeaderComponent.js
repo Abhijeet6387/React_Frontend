@@ -1,3 +1,5 @@
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
@@ -20,7 +22,6 @@ class Header extends Component {
     render() {
         return(
             <div>
-                <React.Component>
                 <Navbar dark expand="md">
                     <div className="container">
                         <NavbarToggler onClick={this.toggleNav}></NavbarToggler>
@@ -53,7 +54,6 @@ class Header extends Component {
                         </div>
                     </div>
                 </Jumbotron>
-                </React.Component>
             </div>
         );
     }
