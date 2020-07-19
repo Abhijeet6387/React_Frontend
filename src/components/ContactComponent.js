@@ -12,7 +12,7 @@ function Contact(props) {
                 </Breadcrumb>
                 <div className="col-12">
                     <h3>Contact Us</h3>
-                    <hr />
+                    <hr></hr>
                 </div>                
             </div>
             <div className="row row-content">
